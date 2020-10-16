@@ -15,7 +15,7 @@ sc = preprocessing.StandardScaler()
 X_train = pd.DataFrame(sc.fit_transform(X_train))
 X_test = pd.DataFrame(sc.transform(X_test))
 
-classifier = RandomForestClassifier(max_features = 'log2', n_estimators = 250, criterion = 'entropy', random_state = 10)
+classifier = RandomForestClassifier(max_features = 'log2', n_estimators = 250, criterion = 'gini', random_state = 0)
 classifier.fit(X_train, y_train)
 
 
